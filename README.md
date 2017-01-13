@@ -70,11 +70,11 @@ The challenge nonce needs to be randomly generated every time the device is run 
 
 Currently the script is run within the Cloud9 IDE supplied by the BeagleBone firmware. In the future, the script will communicate with the user via BlueTooth, through which it will also bridge and internet connection for the ownership determination in step 1.
 
-### Signature Verification (5)
+### 5. Signature Verification
 
 Vitalik Buterin's [Pybitcointools](https://github.com/vbuterin/pybitcointools) is used to verify signatures.
 
-### Unlocking/Locking Sequence (6)
+### 6. Unlocking/Locking Sequence
 
 Code is implemented to momentarily open and close the relay of the Beaglebone Relay Cape (see below).
 
