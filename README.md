@@ -58,21 +58,25 @@ The pseudo-code algorithm for operation of the B_Lock is described below.
 </table>
 
 
-### Ownership Determination (1)
+### 1. Ownership Determination
 
-Part 1 is essential, and is what differentiates the B_Lock from any other lock (smart or "dumb") that has a *single* key. Like any cryptocurrency token the B_Lock’s ownership token is trade-able, thus necessitating the need to check ownership on each use.
+Part 1 is essential, and is what differentiates the B_Lock from any other lock (smart or "dumb") that has a *single* owner. Like any cryptocurrency token the B_Lock’s ownership token is trade-able, thus necessitating the need to check ownership on each use. The code checks the CoinPrism API to determine the current owner address for its token ID. Network access is necessary for this step, as well as SSL libraries to prevent "man in the middle" attacks from changing the owner address.
 
-### Challenge Nonce (2)
+### 2. Challenge Nonce
 
-The challenge nonce needs to be randomly generated every time the device is run to prevent replay attacks.
+The challenge nonce needs to be randomly generated every time the device is run to prevent replay attacks. In the Python implementation this is done with software-based random number generation, however, ultimately hardware-based random data generation is preferred.
 
-### User Communication (3,4)
+### 3. 4. User Communication
 
 Currently the script is run within the Cloud9 IDE supplied by the BeagleBone firmware. In the future, the script will communicate with the user via BlueTooth, through which it will also bridge and internet connection for the ownership determination in step 1.
 
 ### Signature Verification (5)
 
+Vitalik Buterin's [Pybitcointools](https://github.com/vbuterin/pybitcointools) is used to verify signatures.
+
 ### Unlocking/Locking Sequence (6)
+
+Code is implemented to momentarily open and close the relay of the Beaglebone Relay Cape (see below).
 
 ## Hardware Implementation
 
