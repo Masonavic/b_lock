@@ -1,4 +1,4 @@
-# b_Lock: Cryptocurrency Access Token
+# b_Lock: Blockchain Smart Lock
 
 ## Motivation
 
