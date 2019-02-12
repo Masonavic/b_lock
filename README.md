@@ -66,15 +66,15 @@ Part 1 is essential, and is what differentiates the B_Lock from any other lock (
 
 The challenge nonce needs to be randomly generated every time the device is run to prevent replay attacks. In the Python implementation this is done with software-based random number generation, however, ultimately hardware-based random data generation is preferred.
 
-### 3. 4. User Communication
+### 3. User Communication
 
 Currently the script is run within the Cloud9 IDE supplied by the BeagleBone firmware. In the future, the script will communicate with the user via BlueTooth, through which it will also bridge and internet connection for the ownership determination in step 1.
 
-### 5. Signature Verification
+### 4. Signature Verification
 
 Vitalik Buterin's [Pybitcointools](https://github.com/vbuterin/pybitcointools) is used to verify signatures.
 
-### 6. Unlocking/Locking Sequence
+### 5. Unlocking/Locking Sequence
 
 Code is implemented to momentarily open and close the relay of the Beaglebone Relay Cape (see below).
 
